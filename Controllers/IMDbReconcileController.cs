@@ -31,22 +31,22 @@ namespace WebReconcile.Controllers
 				string ldString = "";
 				try
 				{
-                    using StreamReader sr = new StreamReader("cache.json");
-                    ldString += sr.ReadToEnd();
-                }
+					using StreamReader sr = new StreamReader("cache.json");
+					ldString += sr.ReadToEnd();
+				}
 				catch (Exception ex)
 				{
-                    Console.WriteLine(ex.Message);
-                }
+					Console.WriteLine(ex.Message);
+				}
 				return ldString;
 			}
 			set
 			{
 				try
 				{
-                    using StreamWriter outputFile = new StreamWriter("cache.json");
-                    outputFile.WriteLine(value);
-                }
+					using StreamWriter outputFile = new StreamWriter("cache.json");
+					outputFile.WriteLine(value);
+				}
 				catch
 				{
 				}
@@ -173,7 +173,7 @@ namespace WebReconcile.Controllers
 			var prefix = queryString.FirstOrDefault(i => i.Key == "prefix").Value.ToString();
 			var result = new JObject(
 					new JProperty("result",
-					String.IsNullOrEmpty(prefix)? allProperties : new JArray(allProperties.Where(i => i["name"].ToString().StartsWith(prefix)))
+					String.IsNullOrEmpty(prefix) ? allProperties : new JArray(allProperties.Where(i => i["name"].ToString().StartsWith(prefix)))
 				));
 			return CallbackReturn(queryString, result);
 		}

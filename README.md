@@ -17,7 +17,7 @@ How to use
 ----------
 After starting OpenRefine, the service has to be started by running the executable (see [Releases](https://github.com/CennoxX/IMDb-reconciliation-service/releases)).
 
-If you want to run the service from source code, [.NET 5 SDK](https://www.microsoft.com/net/download/all) is required and the service can be run with `dotnet run`.
+If you want to run the service from source code, [.NET 6 SDK](https://www.microsoft.com/net/download/all) is required and the service can be run with `dotnet run`.
 
 To use in OpenRefine:
 * Select a column containing IMDb IDs > Reconcile > Start Reconciling…
